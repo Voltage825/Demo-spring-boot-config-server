@@ -1,0 +1,12 @@
+# It is important that the application has a name, as this is how it tries to get the config.
+# Remember that bootstrap config is loaded before the normal application config. This is
+# so that you app has a name before trying to fetch config
+#
+# spring.cloud.config.enabled
+#   Indicates whether to get config or not.
+spring:
+  application:
+    name: val-service
+  cloud:
+    config:
+      enabled: false

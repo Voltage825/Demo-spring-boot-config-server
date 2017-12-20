@@ -1,0 +1,12 @@
+# It is important that the application has a name, as this is how it tries to get the config.
+# Remember that bootstrap config is loaded before the normal application config. This is
+# so that you app has a name before trying to fetch config.
+#
+# spring.cloud.config.uri
+#   Indicates where to fetch the config. Default is `http://localhost:8888/`
+spring:
+  application:
+    name: val-demo-service
+  cloud:
+    config:
+      uri: http://localhost:8888/

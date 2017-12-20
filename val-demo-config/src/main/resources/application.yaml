@@ -1,0 +1,24 @@
+# spring.cloud.config.server.git.searchPaths:
+#   Use searchPaths for the way the config server will interpret its URL call.
+#   In this case I assume that my config server will host configs for more than one app.
+#   Therefore the searchPaths will be set to [{application}] indicating that we will search per app.
+# spring.cloud.config.server.git.baseDir:
+#   In the event that your application is fetching your config from a GIT repo (Recommended).
+#   Use this property to indicate where the repo should be cloned to.
+# spring.cloud.config.server.git.uri:
+#   This is the URI to your repo. You can have a local or remote repo to handle this.
+#   Locally create a folder like '/shared/config/val-service/' and `git init` it, or
+#   place a 'https://github.com/whomever/whatever.git' for remote. This will be cloned to the 'baseDir' path.
+#
+# Take a look at the documentation https://cloud.spring.io/spring-cloud-config/
+# http://www.baeldung.com/spring-cloud-configuration
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          searchPaths: '{application}'
+#          baseDir: /shared/config-server
+          uri: /shared/config/config-repo/

@@ -1,0 +1,5 @@
+application:
+  sample: If set up correctly I should never see this one :D
+  refreshOnConfigChange: true
+  refreshDelay: 5000
+  enableRefresh: true
